@@ -1,9 +1,12 @@
 {
   "name": "@tookit/vma",
   "version": "0.6.4",
-  "description": "tookit",
+  "description": "Common components created by vuetifyjs",
   "keywords": [
-    "tookit"
+    "material components",
+    "vuetify components",
+    "vuetify cascader",
+    "vuetify form builder"
   ],
   "author": "michaelwang <wangqiangshen@gmail.com>",
   "homepage": "https://github.com/tookit/vmajs",
