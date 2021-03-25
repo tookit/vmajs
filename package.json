@@ -5,11 +5,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tookit/vma"
+    "url": "https://github.com/tookit/vmajs"
   },
   "author": "Michael Wang",
   "bugs": {
-    "url": "https://github.com/tookit/vma/issues"
+    "url": "https://github.com/tookit/vmajs/issues"
   },
   "license": "MIT",
   "scripts": {
