@@ -1,0 +1,33 @@
+{
+  "name": "vuepress-theme-mdc",
+  "version": "1.1.4",
+  "description": "A material design theme ",
+  "author": {
+    "name": "Tookit (Michael Wang)"
+  },
+  "homepage": "https://github.com/tookit/vuepress-theme-neptune#readme",
+  "bugs": {
+    "url": "https://github.com/tookit/vuepress-theme-neptune/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tookit/vuepress-theme-neptune.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vuetify": "^2.4.8",
+    "sass": "^1.26.10",
+    "fibers": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vuetify-loader": "^1.7.2",
+    "yaml": "^1.6.0",
+    "valine": "1.4.14",
+    "vuepress-plugin-container": "^2.1.5",
+    "@vuepress/plugin-active-header-links": "^1.8.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "@vuepress/plugin-search": "^1.8.2"
+  },
+  "devDependencies": {}
+}

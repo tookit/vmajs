@@ -14,7 +14,8 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "dev": "concurrently --kill-others --success first \"npm start --prefix ./packages/vue-material-admin\" \"npm run serve --prefix ./packages/vue-material-admin\"",
+    "docs":"npx lerna run docs:dev --scope vma-docs --stream",
+    "preview": "npx lerna run serve --scope vma --stream",
     "test": "npm run test:common && npm run test:server && npm run test:ui",
     "build:lib": "lerna run build:lib --scope vma-lib",
     "publish": "lerna publish"
@@ -39,14 +40,14 @@
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1",
     "vue": "^2.6.12",
+    "vue-cli-plugin-vuetify": "^2.3.1",
     "vue-template-compiler": "^2.6.12",
-    "vuetify": "^2.4.5",
     "vuetify-loader": "^1.7.2"
   },
   "engines": {
     "node": ">= 8"
   },
   "dependencies": {
-    "vue-cli-plugin-vuetify": "^2.3.1"
+    "vuetify": "^2.4.8"
   }
 }

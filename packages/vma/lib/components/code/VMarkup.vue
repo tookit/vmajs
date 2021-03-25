@@ -28,7 +28,7 @@ export default {
   props: {
     code: String,
     inline: Boolean,
-    language: String
-  }
+    language: String,
+  },
 }
 </script>

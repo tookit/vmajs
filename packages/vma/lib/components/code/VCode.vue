@@ -16,22 +16,22 @@ export default {
   props: {
     rounded: {
       type: [Boolean, String],
-      default: true
+      default: true,
     },
-    dark: Boolean
+    dark: Boolean,
   },
 
   computed: {
     isDark() {
       return this.dark
-    }
+    },
   },
 
   methods: {
     target() {
       return this.$el.querySelector('pre')
-    }
-  }
+    },
+  },
 }
 </script>
 

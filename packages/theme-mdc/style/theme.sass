@@ -1,0 +1,147 @@
+
+@import '~vuetify/src/styles/main.sass'
+// vuetify
+$body-font-family: 'Roboto', sans-serif
+$font-size-root: 14px
+$line-height-root: 1.5
+//
+$primary-color: '#424242'
+
+@import './code'
+
+.v-list-item--active
+  border-right: 2px solid rgba(0, 0, 0, 0.75)
+
+.nep
+  &-header
+  &-sidebar
+  &-footer
+    z-index: 4
+
+.article_toc
+  padding-right: 200px !important
+
+.article__content
+  .btn_toc
+    top: 50%
+    right: 0
+  .toc
+    .toc_list
+      padding: 0
+    .v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
+      color: #616161 !important
+    .toc_list__item
+      -moz-osx-font-smoothing: grayscale
+      -webkit-font-smoothing: antialiased
+      font-size: 0.875rem
+      line-height: 1.5
+      font-weight: 400
+      letter-spacing: 0.0178571429em
+      color: #616161 !important
+      width: 100%
+      border-left: 2px solid rgba(0, 0, 0, 0.30)
+      text-decoration: none
+    .v-list-item--active
+      color: rgba(0, 0, 0, 0.75) !important
+      border-left: 2px solid rgba(0, 0, 0, 0.75)
+  #vcomments
+    margin-top: $spacer * 10
+  h1
+    a
+      display: none
+      padding: $spacer*3 0
+      margin: $spacer*3 0
+  h2
+    padding: $spacer*3 0
+    margin: $spacer*3 0
+    .header-anchor
+      display: none
+  p
+    margin-bottom: $spacer * 3
+  table
+    min-width: 100%
+    border: 0
+    border-collapse: collapse
+    table-layout: fixed
+    white-space: normal
+    th
+      color: #616161
+      background-color: #fafafa
+      font-weight: 500
+      padding: $spacer*2
+      text-align: left
+    td
+      -moz-osx-font-smoothing: grayscale
+      -webkit-font-smoothing: antialiased
+      font-size: .875rem
+      line-height: 1.5
+      font-weight: 400
+      letter-spacing: .03125em
+      text-decoration: inherit
+      text-transform: inherit
+      padding: $spacer*2
+      letter-spacing: normal
+      border: 1px solid #eee
+
+.category__content
+  .category_list
+    .category_list__item
+      margin: $spacer * 10 0
+      border-bottom: 1px dotted #eee
+// custom block
+.custom-block
+  &-title
+    font-weight: 600
+    margin: $spacer 0
+.custom-block.danger,.custom-block.tip,.custom-block.warning
+  padding: .1rem 1.5rem
+  border-left-width: .5rem
+  border-left-style: solid
+  margin: 1rem 0
+
+.custom-block.tip
+  background-color: #f3f5f7
+  border-color: $primary-color
+  & .custom-block-title
+    color: $primary-color
+
+.custom-block.warning
+  background-color: rgba(0,0,0,.7)
+  border-color: #e7c000
+  color: #6b5900
+
+  & .custom-block-title
+    color: #b29400
+
+  & a
+    color: #2c3e50
+
+.custom-block.danger
+  background-color: #ffe6e6
+  border-color: #c00
+  color: #4d0000
+
+  & .custom-block-title
+    color: #900
+
+  & a
+    color: #2c3e50
+
+.custom-block.details
+  display: block
+  position: relative
+  border-radius: 2px
+  margin: 1.6em 0
+  padding: 1.6em
+  background-color: #eee
+
+  & h4
+    margin-top: 0
+
+  & figure:last-child,.custom-block.details p:last-child
+    margin-bottom: 0
+    padding-bottom: 0
+
+  & summary
+    outline: none
+    cursor: pointer

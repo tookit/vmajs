@@ -11,16 +11,16 @@ export default {
   functional: true,
   props: {
     code: {
-      type: String
+      type: String,
     },
     inline: {
       type: Boolean,
-      default: false
+      default: false,
     },
     language: {
       type: String,
-      default: 'markup'
-    }
+      default: 'markup',
+    },
   },
   render(h, ctx) {
     const code = ctx.props.code || (ctx.children && ctx.children.length > 0 ? ctx.children[0].text : '')
@@ -41,8 +41,8 @@ export default {
         assign({}, ctx.data, {
           class: [ctx.data.class, className],
           domProps: assign({}, ctx.data.domProps, {
-            innerHTML: Prism.highlight(code, prismLanguage)
-          })
+            innerHTML: Prism.highlight(code, prismLanguage),
+          }),
         })
       )
     }
@@ -50,16 +50,16 @@ export default {
     return h(
       'pre',
       assign({}, ctx.data, {
-        class: [ctx.data.class, className]
+        class: [ctx.data.class, className],
       }),
       [
         h('code', {
           class: className,
           domProps: {
-            innerHTML: Prism.highlight(code, prismLanguage)
-          }
-        })
+            innerHTML: Prism.highlight(code, prismLanguage),
+          },
+        }),
       ]
     )
-  }
+  },
 }

@@ -1,3 +1,0 @@
-[submodule "packages/theme-neptune"]
-	path = packages/theme-neptune
-	url = git@github.com:tookit/vuepress-theme-neptune.git
