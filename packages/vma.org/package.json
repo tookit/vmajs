@@ -1,0 +1,20 @@
+{
+  "name": "vma.org",
+  "description": "Tookit's Personal Blog",
+  "author": "tookit",
+  "version": "0.6.5",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "vuepress-theme-mdc": "^1.1.4"
+  }
+}

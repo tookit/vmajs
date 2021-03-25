@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="app--drawer" app clipped v-model="showDrawer">
+  <v-navigation-drawer v-model="showDrawer" class="app--drawer" app clipped>
     <v-list>
       <v-subheader>Category</v-subheader>
       <v-list-item v-for="cat in categories" :key="cat.key" :to="cat.path">
@@ -17,20 +17,20 @@ export default {
   props: {},
   data() {
     return {
-      showDrawer: true
+      showDrawer: true,
     }
   },
   computed: {
     categories() {
       const lang = this.$lang
       return this.$categories.filter((item) => item.frontmatter.lang == lang)
-    }
+    },
   },
+  created() {},
   methods: {
     toogleSidebar() {
       this.showDrawer != this.showDrawer
-    }
+    },
   },
-  created() {}
 }
 </script>

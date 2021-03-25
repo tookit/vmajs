@@ -16,7 +16,7 @@
             <v-icon class="mr-2">mdi-calendar</v-icon>
             {{ $page.frontmatter.date }}
           </v-chip>
-          <v-chip class="mr-2" label outlined v-for="item in tags" :key="item">
+          <v-chip v-for="item in tags" :key="item" class="mr-2" label outlined>
             {{ item }}
           </v-chip>
         </div>
@@ -28,10 +28,10 @@
           <v-card tile flat>
             <v-card-text>
               <v-timeline
-                dense
-                clipped
                 v-for="(item, key) in changelogs"
                 :key="$lang + key"
+                dense
+                clipped
               >
                 <v-timeline-item
                   class="mb-4"
@@ -66,21 +66,21 @@ export default {
       changelogs: [
         {
           version: '1.0.0',
-          text: 'Create vuepress theme with vuetify'
+          text: 'Create vuepress theme with vuetify',
         },
         {
           version: '1.1.0',
-          text: 'Publish theme'
-        }
-      ]
+          text: 'Publish theme',
+        },
+      ],
     }
   },
   computed: {
     tags() {
       const { frontmatter } = this.$page
       return frontmatter.tags || ['Default']
-    }
+    },
   },
-  methods: {}
+  methods: {},
 }
 </script>

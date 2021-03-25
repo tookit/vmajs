@@ -26,8 +26,8 @@
             <v-list class="category_list" three-line>
               <template v-for="item in posts">
                 <v-list-item
-                  class="category_list__item"
                   :key="item.key"
+                  class="category_list__item"
                   :to="item.path"
                 >
                   <v-list-item-avatar tile color="grey" size="80">
@@ -41,12 +41,12 @@
                         item.frontmatter.date
                       }}</span>
                       <v-chip
+                        v-for="tag in item.frontmatter.tags"
+                        :key="tag"
                         color="primary"
                         class="mr-2 hidden-xs-only"
                         label
                         outlined
-                        v-for="tag in item.frontmatter.tags"
-                        :key="tag"
                       >
                         {{ tag }}
                       </v-chip>
@@ -62,12 +62,12 @@
         </template>
         <template v-else>
           <v-col
+            v-for="post in posts"
+            :key="post.key"
             :cols="12"
             :lg="3"
             :xl="3"
             :sm="12"
-            v-for="post in posts"
-            :key="post.key"
           >
             <v-card ripple :to="post.path" tile>
               <v-img :src="computePostImage(post.frontmatter)"> </v-img>
@@ -83,13 +83,13 @@
                           {{ post.frontmatter.date }}
                         </div>
                         <v-chip
+                          v-for="tag in post.frontmatter.tags"
+                          :key="tag"
                           color="primary"
                           class="mr-2"
                           label
                           small
                           outlined
-                          v-for="tag in post.frontmatter.tags"
-                          :key="tag"
                         >
                           {{ tag }}
                         </v-chip>
@@ -112,7 +112,7 @@ export default {
   data() {
     return {
       showDrawer: true,
-      viewMode: 'grid'
+      viewMode: 'grid',
     }
   },
   computed: {
@@ -125,7 +125,7 @@ export default {
           this.$lang === frontmatter.lang
         )
       })
-    }
+    },
   },
   methods: {
     handleToggleSideBar() {
@@ -133,10 +133,8 @@ export default {
     },
     computePostImage(frontmatter) {
       return frontmatter.image || '/img/mock.png'
-    }
+    },
   },
-  mounted() {},
-  created() {}
 }
 </script>
 

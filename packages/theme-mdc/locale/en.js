@@ -3,6 +3,6 @@ export default {
   ...en,
   // theme level
   toc: {
-    title: 'Table of content'
-  }
+    title: 'Table of content',
+  },
 }

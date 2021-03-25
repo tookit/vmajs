@@ -4,6 +4,6 @@ export default {
   ...zhHans,
   // theme level
   toc: {
-    title: '导航'
-  }
+    title: '导航',
+  },
 }

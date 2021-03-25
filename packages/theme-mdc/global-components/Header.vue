@@ -1,6 +1,6 @@
 <template>
-  <v-app-bar dark app clipped-left>
-    <v-app-bar-nav-icon @click="$emit('toogle:sidebar')" v-if="!isHome" />
+  <v-app-bar color="primary" dark app clipped-left>
+    <v-app-bar-nav-icon v-if="!isHome" @click="$emit('toogle:sidebar')" />
     <router-link to="/">
       <v-img
         alt="Logo"
@@ -19,7 +19,7 @@
       <v-btn icon>
         <v-icon>mdi-github</v-icon>
       </v-btn>
-      <v-btn v-for="item in navLinks" :to="item.link" :key="item.text">
+      <v-btn v-for="item in navLinks" :key="item.text" :to="item.link">
         {{ item.text }}</v-btn
       >
       <LanguageSwitch :locales="locales" />
@@ -42,9 +42,9 @@ export default {
     },
     siteTitle() {
       return this.$site.title
-    }
+    },
   },
-  created() {}
+  created() {},
 }
 </script>
 

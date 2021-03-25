@@ -42,7 +42,7 @@ import Vuetify, {
   VFabTransition,
   VSubheader,
   VSpacer,
-  VDivider
+  VDivider,
 } from 'vuetify/lib'
 import colors from 'vuetify/lib/util/colors'
 import './style/theme.sass'
@@ -55,7 +55,7 @@ export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
   router, // the router instance for the app
-  siteData // site metadata
+  siteData, // site metadata
 }) => {
   // console.log(siteData, options)
   Vue.use(Vuetify, {
@@ -103,17 +103,17 @@ export default ({
       VFabTransition,
       VSubheader,
       VSpacer,
-      VDivider
+      VDivider,
     },
     directives: {
       Ripple,
-      Scroll
-    }
+      Scroll,
+    },
   })
   options.vuetify = new Vuetify({
     lang: {
       locales: { zh, en },
-      current: 'en'
+      current: 'en',
     },
     theme: {
       themes: {
@@ -121,13 +121,13 @@ export default ({
           primary: colors.grey.darken4,
           secondary: colors.grey.darken1,
           accent: colors.shades.black,
-          error: colors.red.accent3
+          error: colors.red.accent3,
         },
         dark: {
-          primary: colors.blue.lighten3
-        }
-      }
-    }
+          primary: colors.blue.lighten3,
+        },
+      },
+    },
   })
 
   Vue.mixin(postsMixin)

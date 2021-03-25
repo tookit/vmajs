@@ -3,7 +3,7 @@
     <v-container>
       <v-row no-gutter>
         <v-col cols="12">
-          <div class="white--text text-center ">
+          <div class="white--text text-center">
             <v-icon dark>mdi-github</v-icon>
             <v-icon dark>mdi-twitter</v-icon>
             <v-spacer></v-spacer>

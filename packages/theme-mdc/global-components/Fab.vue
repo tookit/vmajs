@@ -1,8 +1,22 @@
 <template>
   <v-fab-transition>
-    <v-btn v-show="fab" v-scroll="onScroll" :style="{
-        bottom: fab ? '100px' : ''
-      }" aria-label="Scroll to top" bottom small color="primary" dark fab fixed right title="Scroll to top" @click="toTop">
+    <v-btn
+      v-show="fab"
+      v-scroll="onScroll"
+      :style="{
+        bottom: fab ? '100px' : '',
+      }"
+      aria-label="Scroll to top"
+      bottom
+      small
+      color="primary"
+      dark
+      fab
+      fixed
+      right
+      title="Scroll to top"
+      @click="toTop"
+    >
       <v-icon>mdi-rocket</v-icon>
     </v-btn>
   </v-fab-transition>
@@ -10,20 +24,20 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      fab: false
+      fab: false,
     }
   },
   methods: {
-    onScroll () {
+    onScroll() {
       if (typeof window === 'undefined') return
       const top = window.pageYOffset || document.documentElement.offsetTop || 0
       this.fab = top > 300
     },
-    toTop () {
+    toTop() {
       this.$vuetify.goTo(0)
-    }
-  }
+    },
+  },
 }
 </script>

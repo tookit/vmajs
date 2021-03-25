@@ -31,7 +31,7 @@ const replaceChar = (origString, replaceChar, index) => {
 export default {
   name: 'LangugeSwitch',
   props: {
-    locales: Object
+    locales: Object,
   },
   data() {
     return {}
@@ -39,7 +39,7 @@ export default {
   computed: {
     currentLanguage() {
       return this.locales[this.$localePath]
-    }
+    },
   },
   methods: {
     handleChanggeLocale(lang, $localePath) {
@@ -55,7 +55,7 @@ export default {
         path = temp[1]
       }
       return $localePath + path
-    }
-  }
+    },
+  },
 }
 </script>

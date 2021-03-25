@@ -1,12 +1,12 @@
 <template>
-  <v-app dark class="nep">
-    <Header @toogle:sidebar="handleToggleSidebar" class="nep-header" />
-    <Sidebar ref="sidebar" v-if="element !== 'Home'" class="nep-sidebar" />
+  <v-app dark>
+    <Header @toogle:sidebar="handleToggleSidebar" />
+    <Sidebar v-if="element !== 'Home'" ref="sidebar" />
     <ClientOnly>
       <component :is="element"></component>
     </ClientOnly>
 
-    <Footer class="nep-footer" />
+    <Footer />
     <Fab />
   </v-app>
 </template>
@@ -17,46 +17,44 @@ import Article from '@theme/components/Article'
 import Category from '@theme/components/Category'
 import Timeline from '@theme/components/Timeline'
 export default {
-  data () {
+  components: { Home, Article, Category, Timeline },
+  data() {
     return {
       showDrawer: true,
-      showToc: true
+      showToc: true,
     }
   },
-  components: { Home, Article, Category, Timeline },
   computed: {
-    element () {
+    element() {
       const { layout, home } = this.$page.frontmatter
       return home === true ? 'Home' : layout || 'Article'
     },
-    pageClasses () {
+    pageClasses() {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
         {
           'sidebar-open': this.shouldShowSidebar && this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar
+          'no-sidebar': !this.shouldShowSidebar,
         },
-        userPageClass
+        userPageClass,
       ]
-    }
+    },
   },
-  methods: {
-    handleToggleSidebar () {
-      const sidebar = this.$refs.sidebar
-      sidebar.showDrawer = !sidebar.showDrawer
-    }
-  },
-  mounted () {
+  mounted() {
     this.$vuetify.lang.current = this.$lang
   },
-  created () {
+  created() {
     if (this.$ssrContext) {
       this.$ssrContext.title = this.$title
       this.$ssrContext.lang = this.$lang
       this.$ssrContext.description = this.$page.description || this.$description
     }
-  }
+  },
+  methods: {
+    handleToggleSidebar() {
+      const sidebar = this.$refs.sidebar
+      sidebar.showDrawer = !sidebar.showDrawer
+    },
+  },
 }
 </script>
-
-<style src="prismjs/themes/prism-tomorrow.css"></style>

@@ -25,8 +25,8 @@ module.exports = (options, ctx) => {
           sassOptions: {
             fiber: require('fibers'),
             indentedSyntax: true, // optional
-            additionalData: "@import '@/style/variable.scss';"
-          }
+            additionalData: "@import '@/style/variable.scss';",
+          },
         })
         .end()
         .rule('sass')
@@ -39,7 +39,7 @@ module.exports = (options, ctx) => {
         '@AlgoliaSearchBox': isAlgoliaSearch
           ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')
           : path.resolve(__dirname, 'noopModule.js'),
-        '@docs': `${sourceDir}${sep}.vuepress${sep}styles`
+        '@docs': `${sourceDir}${sep}.vuepress${sep}styles`,
       }
     },
     plugins: [
@@ -51,28 +51,28 @@ module.exports = (options, ctx) => {
         {
           type: 'tip',
           defaultTitle: {
-            '/': 'Tip'
-          }
-        }
+            '/': 'Tip',
+          },
+        },
       ],
       [
         'vuepress-plugin-container',
         {
           type: 'warning',
           defaultTitle: {
-            '/': 'WARNING'
-          }
-        }
+            '/': 'WARNING',
+          },
+        },
       ],
       [
         'vuepress-plugin-container',
         {
           type: 'danger',
           defaultTitle: {
-            '/': 'WARNING'
-          }
-        }
-      ]
-    ]
+            '/': 'WARNING',
+          },
+        },
+      ],
+    ],
   }
 }

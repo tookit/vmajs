@@ -20,10 +20,9 @@ const msgs = [
 
 export default {
   methods: {
-    getMsg () {
+    getMsg() {
       return msgs[Math.floor(Math.random() * msgs.length)]
     },
   },
 }
 </script>
-
