@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" dark app clipped-left>
+  <v-app-bar dark app clipped-left>
     <v-app-bar-nav-icon v-if="!isHome" @click="$emit('toogle:sidebar')" />
     <router-link to="/">
       <v-img
@@ -19,7 +19,7 @@
       <v-btn icon>
         <v-icon>mdi-github</v-icon>
       </v-btn>
-      <v-btn v-for="item in navLinks" :key="item.text" :to="item.link">
+      <v-btn v-for="item in navLinks" :key="item.text" :to="item.link" text>
         {{ item.text }}</v-btn
       >
       <LanguageSwitch :locales="locales" />

@@ -1,12 +1,5 @@
 <template>
   <v-main class="article__content" :class="tocClass">
-    <v-sheet class="py-10 px-5">
-      <div class="article__hero">
-        <h1 class="display-2 mb-5">{{ $page.title }}</h1>
-        <p class="body-1">demo description</p>
-      </div>
-      <v-divider />
-    </v-sheet>
     <v-container>
       <v-row>
         <v-col cols="12">

@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="showDrawer" class="app--drawer" app clipped>
+  <v-navigation-drawer class="app--drawer" app clipped>
     <v-list>
       <v-subheader>Category</v-subheader>
       <v-list-item v-for="cat in categories" :key="cat.key" :to="cat.path">
