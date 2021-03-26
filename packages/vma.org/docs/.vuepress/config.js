@@ -5,10 +5,12 @@ module.exports = {
     nav: {
       '/': [
         { text: 'Home', link: '/' },
+        { text: 'component', link: '/components/' },
       ],
       '/zh/': [
         { text: '首页', link: '/zh' },
-      ]
+        { text: '组件', link: '/zh/components' },
+      ],
     },
     sidebar: {},
   },
@@ -16,15 +18,15 @@ module.exports = {
     '/': {
       lang: 'en',
       name: 'English',
-      title: 'Vuepress theme neptune',
-      description: 'A nice dark vuepress theme made with vuetify 2.0',
+      title: 'Vue Material Admin Document',
+      description: 'Vue Material admin dashboard built with vuetify 2.x',
       flag: '/img/en.png'
     },
     '/zh/': {
       lang: 'zh',
       name: '简体中文',
-      title: 'vupresss黑色主题',
-      description: '一个整洁简单的深色vuepress主题',
+      title: 'Vue Material Admin 文档',
+      description: 'Vue Material admin dashboard built with vuetify 2.x',
       flag: '/img/zh.png'
     }
   },
