@@ -19,12 +19,43 @@ I just wrapped some common element, so you can easily create a nice material des
 
 Play with it.
 
-### Clone the code
+## Clone the code
   
 ``` bash
 git clone [VMA](https://github.com/tookit/vue-material-admin)
 
 ```
+
+## Stucture
+
+```
+
+├── src
+│   ├── api
+│   ├── components
+│   ├── mixins
+│   ├── views
+│   ├── router
+│   ├── store
+│   ├── util
+│   ├── theme
+│   │   ├── default.sass
+│   └── App.vue
+│   └── event.js
+│   └── main.js
+├── dist
+├── static (or asset)
+├── node_modules
+├── test
+├── README.md
+├── package.json
+├── index.html
+├── vue.config.js
+└── .gitignore
+
+```
+
+
 ###  Install dependcy
 
 you can use `yarn` or `npm`
