@@ -13,6 +13,8 @@ module.exports = {
       ],
     },
     sidebar: {},
+    github: 'https://github.com/tookit/vmajs',
+
   },
   locales: {
     '/': {

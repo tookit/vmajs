@@ -14,8 +14,20 @@
             </v-btn>            
           </v-col>
           <v-col :cols="6">
-            <v-img src="/img/preview.png">
-            </v-img>
+            <v-carousel
+                cycle
+                height="400"
+                hide-delimiter-background
+                show-arrows-on-hover
+              >
+
+                <v-carousel-item
+                  v-for="(slide, i) in slides"
+                  :key="i"
+                >
+                  <v-img :src="slide" />
+                </v-carousel-item>
+              </v-carousel>            
           </v-col>          
         </v-row>
       </v-container>
@@ -32,6 +44,13 @@ export default {
     }
   },
   computed: {
+    slides() {
+      return [
+        '/img/preview.png',
+        '/img/media.png',
+        '/img/custom_option.png'
+      ]
+    },
     startUrl() {
       return '/intro/quick-start.html'
     },
@@ -45,7 +64,5 @@ export default {
       )
     }
   },
-  mounted() {},
-  created() {}
 }
 </script>

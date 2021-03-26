@@ -1,11 +1,11 @@
 <template>
-  <v-menu bottom left offset-y>
+  <v-menu rounded="0" bottom left offset-y>
     <template #activator="{ on: menu }">
       <v-btn text style="min-width: 48px" v-on="menu">
         <v-img :src="currentLanguage.flag" width="26px" />
       </v-btn>
     </template>
-    <v-list dense light>
+    <v-list dense light class="pa-0">
       <v-list-item
         v-for="(language, path) in locales"
         :key="language.lang"

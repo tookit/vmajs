@@ -12,6 +12,9 @@ import Vuetify, {
   VRow,
   VCol,
   VFooter,
+  //
+  VCarousel,
+  VCarouselItem,
   //tab
   VTabs,
   VTab,
@@ -90,6 +93,8 @@ export default ({
       VCol,
       VFooter,
       //
+      VCarousel,
+      VCarouselItem,
       //tab
       VTabs,
       VTab,

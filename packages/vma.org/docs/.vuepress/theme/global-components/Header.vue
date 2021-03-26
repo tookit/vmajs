@@ -6,10 +6,10 @@
     </v-toolbar-title>
     <v-spacer />
     <v-toolbar-items class="hidden-xs-only">
-      <v-btn icon>
+      <v-btn icon :href="$site.themeConfig.github" target="_blank">
         <v-icon>mdi-github</v-icon>
       </v-btn>
-      <v-btn v-for="item in navLinks" :key="item.text" :to="item.link" text>
+      <v-btn v-for="item in navLinks" :key="item.text" :to="item.link" exact text>
         {{ item.text }}</v-btn
       >
       <LanguageSwitch :locales="locales" />
