@@ -12,14 +12,26 @@ tags:
 
 ## Cascader Select
 
-Cascade selection box. comm
+Cascade selection box. 
 
 ## Usage
 
-``` js
-<v-cascader :items="items">
+<v-example file="ex-cascader" lang="js"> </v-example>
 
+
+``` js
+<script>
+export default {
+  mounted () {
+    import('./lib-that-access-window-on-import').then(module => {
+      // use code
+    })
+  }
+}
+</script>
 ```
+
+## Playground
 
 ## API
 
@@ -30,4 +42,5 @@ Cascade selection box. comm
 | itemText  | String  |  value  |     N     | Set property of items’s text value                 |
 | outlined  | Boolean |  false  |     N     | Applies the outlined style to the input            |
 |   label   | String  |  null   |     N     | Set input's label                                  |
+
 

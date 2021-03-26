@@ -15,19 +15,25 @@
   },
   "main": "index.js",
   "dependencies": {
-    "vue": "^2.6.12",
-    "vuetify": "^2.4.8",
-    "sass": "^1.26.10",
-    "fibers": "^5.0.0",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "vuetify-loader": "^1.7.2",
-    "yaml": "^1.6.0",
-    "valine": "1.4.14",
-    "vuepress-plugin-container": "^2.1.5",
     "@vuepress/plugin-active-header-links": "^1.8.2",
     "@vuepress/plugin-nprogress": "^1.8.2",
-    "@vuepress/plugin-search": "^1.8.2"
+    "@vuepress/plugin-search": "^1.8.2",
+    "fibers": "^5.0.0",
+    "markdown-it-prism": "^2.1.6",
+    "node-sass": "^4.13.0",
+    "prism": "^4.1.2",
+    "prismjs": "^1.23.0",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.0",
+    "valine": "1.4.14",
+    "vue": "^2.6.12",
+    "vuepress-plugin-container": "^2.1.5",
+    "vuetify": "^2.4.8",
+    "vuetify-loader": "^1.7.2",
+    "yaml": "^1.6.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@vuepress/plugin-register-components": "^1.8.2"
+  }
 }

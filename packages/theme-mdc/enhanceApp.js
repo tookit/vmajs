@@ -43,6 +43,12 @@ import Vuetify, {
   VSubheader,
   VSpacer,
   VDivider,
+  VLazy,
+  VExpandTransition,
+  VItem,
+  VWindow,
+  VWindowItem,
+  VItemGroup
 } from 'vuetify/lib'
 import colors from 'vuetify/lib/util/colors'
 import './style/theme.sass'
@@ -50,6 +56,7 @@ import { Ripple, Scroll } from 'vuetify/lib/directives'
 import zh from '@theme/locale/zh-Hans'
 import en from '@theme/locale/en'
 import postsMixin from '@theme/mixins/posts'
+import { VCascader } from "@tookit/vma";
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -104,6 +111,13 @@ export default ({
       VSubheader,
       VSpacer,
       VDivider,
+      VLazy,
+      VExpandTransition,
+      VItem,
+      VWindow,
+      VWindowItem,
+      VItemGroup,
+      VCascader
     },
     directives: {
       Ripple,

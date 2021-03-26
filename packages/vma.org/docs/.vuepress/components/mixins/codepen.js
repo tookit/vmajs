@@ -7,9 +7,9 @@ export default {
         const template = await import(
           /* webpackChunkName: "examples-source" */
           /* webpackMode: "lazy-once" */
-          `!raw-loader!../${this.file}.vue`
+          `!raw-loader!../../examples/${this.file}.vue`
         )
-
+        console.log(template)
         this.boot(template.default)
       } catch (err) {
         console.log(err)

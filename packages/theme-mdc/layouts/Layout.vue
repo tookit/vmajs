@@ -16,6 +16,7 @@ import Home from '@theme/components/Home'
 import Article from '@theme/components/Article'
 import Category from '@theme/components/Category'
 import Timeline from '@theme/components/Timeline'
+
 export default {
   components: { Home, Article, Category, Timeline },
   data() {
@@ -58,3 +59,4 @@ export default {
   },
 }
 </script>
+<style src="prismjs/themes/prism-tomorrow.css"></style>

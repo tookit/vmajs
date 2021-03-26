@@ -38,6 +38,12 @@ module.exports = {
       {
         ga: 'UA-3881136-7'
       }
+    ],
+    [
+      'register-components',
+      {
+        componentsDir: 'components'
+      }
     ]
   ]
 }

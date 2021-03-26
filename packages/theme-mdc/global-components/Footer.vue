@@ -1,5 +1,5 @@
 <template>
-  <v-footer app color="black lighten-4">
+  <v-footer color="black lighten-4">
     <v-container>
       <v-row no-gutter>
         <v-col cols="12">
@@ -8,7 +8,7 @@
             <v-icon dark>mdi-twitter</v-icon>
             <v-spacer></v-spacer>
             <p class="mt-2">
-              Power by vuepress and vuepress-theme-neptune &copy;
+              Power by vuepress and vuepress-theme-mdc &copy;
               {{ new Date().getFullYear() }}
             </p>
           </div>
