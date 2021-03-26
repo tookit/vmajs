@@ -11,7 +11,8 @@ $line-height-root: 1.5
 
 .article_toc
   padding-right: 200px !important
-
+  .v-list-item--active
+    border-left: 2px solid rgba(0, 0, 0, 0.75)
 .article
   max-width: 960px
   margin: 0 auto
@@ -43,12 +44,12 @@ $line-height-root: 1.5
     margin-top: $spacer * 10
   h1
     a
-      display: none
       padding: $spacer*3 0
       margin: $spacer*3 0
   h2
     padding: $spacer*3 0
     margin: $spacer*3 0
+    font-weight: 400
     .header-anchor
       display: none
   p

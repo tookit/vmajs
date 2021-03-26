@@ -3,6 +3,7 @@ title: Cascader Select
 desc: A  common description here 
 layout: Article
 lang: en-US
+icon: mdi-form-select
 date: "2020-09-12"
 category: components
 ---

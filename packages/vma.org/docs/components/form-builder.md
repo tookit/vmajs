@@ -3,6 +3,7 @@ title: Form Bulder
 desc: Very useful component for building vuetify forms
 layout: Article
 lang: en-US
+icon: mdi-radio-fm
 date: "2021-03-22"
 category: components
 ---

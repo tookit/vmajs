@@ -3,7 +3,7 @@
     <v-subheader>{{ $vuetify.lang.t('$vuetify.toc.title') }}</v-subheader>
     <v-divider />
     <slot name="top" />
-    <v-list dense class="toc_list">
+    <v-list dense class="toc_list pa-0">
       <v-list-item
         v-for="item in $page.headers"
         :key="item.slug"
