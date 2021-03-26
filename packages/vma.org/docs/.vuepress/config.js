@@ -5,11 +5,11 @@ module.exports = {
     nav: {
       '/': [
         { text: 'Home', link: '/' },
-        { text: 'component', link: '/components/' },
+        { text: 'component', link: '/components/cascader.html' },
       ],
       '/zh/': [
         { text: '首页', link: '/zh' },
-        { text: '组件', link: '/zh/components' },
+        { text: '组件', link: '/zh/components/cascader.html' },
       ],
     },
     sidebar: {},
