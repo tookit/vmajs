@@ -13,18 +13,14 @@
 <script>
 export default {
   name: 'VueFile',
-
   inheritAttrs: false,
-
   props: {
     file: {
       type: String,
       required: true,
     },
   },
-
   data: () => ({ component: undefined }),
-
   created() {
     this.load()
   },

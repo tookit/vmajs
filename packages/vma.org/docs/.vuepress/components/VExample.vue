@@ -22,7 +22,10 @@
           <v-tabs-items v-model="defaultTab">
             <template v-for="section in sections">
               <v-tab-item :key="section" :value="section">
-                <v-markup :code="pen[section]" />
+                <div class="language-markup">
+                  <v-prism  :code="pen[section]" />
+                </div>
+                <!-- <v-markup :code="pen[section]" lang="js"/> -->
               </v-tab-item>
             </template>
           </v-tabs-items>
@@ -43,12 +46,12 @@
 // Mixins
 import Codepen from './mixins/codepen'
 import VueFile from './VueFile'
-import VMarkup from './VMarkup'
+import VPrism from './VPrism'
 export default {
   name: 'VExample',
   components: {
     VueFile,
-    VMarkup,
+    VPrism,
   },
   mixins: [Codepen],
   props: { file: String },
@@ -63,42 +66,11 @@ export default {
   computed: {
     sections() {
       return ['template', 'script', 'style'].filter((section) => this.pen[section])
-    },
-    tooltips() {
-      return [
-        {
-          icon: '$mdiInvertColors',
-          path: 'invert-example-colors',
-          onClick: () => (this.dark = !this.dark),
-        },
-        {
-          icon: '$mdiCodepen',
-          path: 'edit-in-codepen',
-          onClick: this.sendToCodepen,
-        },
-        {
-          icon: '$mdiGithub',
-          path: 'view-in-github',
-          href: `https://github.com/vuetifyjs/vuetify/tree/${this.branch}/packages/docs/src/examples/${this.file}.vue`,
-          onClick: () => {},
-        },
-        {
-          icon: '$mdiCodeTags',
-          path: 'view-source',
-          onClick: () => (this.expand = !this.expand),
-        },
-      ]
-    },
+    }
   },
 }
 </script>
 
 <style lang="sass">
-.v-example
-  code[class*="language-"],
-  pre[class*="language-"]
-    text-shadow: none
 
-  pre.language-markup::after
-    content: 'vue'
 </style>

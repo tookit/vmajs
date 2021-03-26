@@ -26,14 +26,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "markdown-it-prism": "^2.1.6",
     "n-ary-tree": "^0.4.0",
-    "prism": "4.1.2",
-    "prismjs": "^1.23.0",
-    "raw-loader": "^4.0.2",
     "vuetify": "2.4.8"
   },
   "devDependencies": {
-    "@vuepress/plugin-register-components": "^1.8.2"
   }
 }

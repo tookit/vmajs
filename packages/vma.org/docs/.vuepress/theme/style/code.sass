@@ -6,14 +6,13 @@ $code-lang-top: 22px
 $code-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
 $code-padding-base: 22px
 $line-wrapper-width: 44px
-.v-application
-  .article
-    @each $lang in $code-lang
-      div[class~="language-#{$lang}"]
-        &:before
-          content: "#{$lang}"
-               
-    div[class*="language-"]
+
+@each $lang in $code-lang
+  div[class~="language-#{$lang}"]
+    &:before
+      content: "#{$lang}"
+            
+div[class*="language-"]
       position: relative
       &:not(.line-numbers-mode)
         .line-numbers-wrapper
