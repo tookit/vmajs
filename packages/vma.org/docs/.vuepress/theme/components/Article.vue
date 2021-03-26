@@ -5,7 +5,11 @@
         <v-col cols="12">
           <Content custom class="article content" />
         </v-col>
-        <!-- Related article -->
+      </v-row>
+    </v-container>
+    <v-container>
+      <!-- Related article -->
+      <v-row class="grey lighten-4">
         <v-col :cols="12">
           <h3 class="mb-2">Up next</h3>
           <v-divider />

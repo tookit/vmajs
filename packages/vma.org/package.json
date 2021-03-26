@@ -1,6 +1,6 @@
 {
   "name": "vma.org",
-  "description": "Tookit's Personal Blog",
+  "description": "Vue material admin document site",
   "author": "tookit",
   "version": "0.6.5",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
     "@vuepress/plugin-register-components": "^1.8.2",
     "vuepress": "^1.8.2"
   },

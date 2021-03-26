@@ -1,7 +1,6 @@
 module.exports = {
-  title: 'Vuepress theme neptune',
-  description: 'A nice dark vuepress theme made with vuetify 2.0',
-  theme: 'vuepress-theme-mdc',
+  title: 'Vue Material Admin Document',
+  description: 'Vue Material Admin Document',
   themeConfig: {
     nav: {
       '/': [

@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="black lighten-4">
+  <v-footer dark padless>
     <v-container>
       <v-row no-gutter>
         <v-col cols="12">
