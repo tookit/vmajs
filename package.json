@@ -14,7 +14,9 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "docs:deploy": "npx lerna run docs:deploy --scope vma.org --stream",
     "docs:dev": "npx lerna run docs:dev --scope vma.org --stream",
+    "docs:build": "npx lerna run docs:build --scope vma.org --stream",
     "preview": "npx lerna run serve --scope vma --stream",
     "test": "npm run test:common && npm run test:server && npm run test:ui",
     "build:lib": "lerna run build:lib --scope vma-lib",

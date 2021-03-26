@@ -8,11 +8,13 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "docs:deploy":"aliyun-oss-deploy -p ./docs/.vuepress/dist",
     "release": "release-it"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.8.2",
     "@vuepress/plugin-register-components": "^1.8.2",
+    "aliyun-oss-deploy": "^0.1.5",
     "vuepress": "^1.8.2"
   },
   "dependencies": {
