@@ -1,12 +1,12 @@
 <template>
-  <v-sheet class="mb-9 v-example" outlined rounded>
+  <v-sheet class="mb-9 v-example" outlined>
     <v-lazy min-height="52" @mouseenter="importTemplate">
       <div class="text-end pa-2">
-        <v-btn text @click="expand=true">
-          code
+        <v-btn icon @click="expand= !expand">
+          <v-icon>mdi-code-tags</v-icon>
         </v-btn>
-        <v-btn text>
-          view
+        <v-btn icon @click="expand=!expand">
+          <v-icon>mdi-eye</v-icon>
         </v-btn>        
       </div>
     </v-lazy>
@@ -42,8 +42,10 @@
 
     </div>
     <!--  -->
-    <v-sheet class="pa-4" rounded>
-      <vue-file :file="file" @error="hasError = true" />
+    <v-sheet class="pa-8">
+      <div style="max-width: 600px; margin:0 auto;">
+        <vue-file :file="file" @error="hasError = true" />
+      </div>
     </v-sheet>
   </v-sheet>
 </template>

@@ -1,10 +1,15 @@
 <template>
   <v-navigation-drawer class="app--drawer" app clipped>
     <v-list>
-      <v-subheader>Category</v-subheader>
-      <v-list-item v-for="cat in categories" :key="cat.key" :to="cat.path">
+      <v-subheader>Components</v-subheader>
+      <v-list-item
+        v-for="item in componentPage"
+        :key="item.key"
+        :value="item.key"
+        :to="item.path"
+      >
         <v-list-item-content>
-          <v-list-item-title>{{ cat.title }}</v-list-item-title>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -13,7 +18,6 @@
 
 <script>
 export default {
-  components: {},
   props: {},
   data() {
     return {
@@ -21,9 +25,9 @@ export default {
     }
   },
   computed: {
-    categories() {
+    componentPage() {
       const lang = this.$lang
-      return this.$categories.filter((item) => item.frontmatter.lang == lang)
+      return this.$site.pages.filter((item) => item.frontmatter.lang == lang)
     },
   },
   created() {},

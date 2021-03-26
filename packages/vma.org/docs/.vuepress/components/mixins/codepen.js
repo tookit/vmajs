@@ -9,7 +9,6 @@ export default {
           /* webpackMode: "lazy-once" */
           `!raw-loader!../../examples/${this.file}.vue`
         )
-        console.log(template)
         this.boot(template.default)
       } catch (err) {
         console.log(err)

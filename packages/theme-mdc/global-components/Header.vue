@@ -1,16 +1,6 @@
 <template>
   <v-app-bar dark app clipped-left>
     <v-app-bar-nav-icon v-if="!isHome" @click="$emit('toogle:sidebar')" />
-    <router-link to="/">
-      <v-img
-        alt="Logo"
-        src="/img/logo.png"
-        contain
-        transition="scale-transition"
-        height="24px"
-        width="24px"
-      />
-    </router-link>
     <v-toolbar-title class="ml-0 pl-3">
       <span>{{ siteTitle }}</span>
     </v-toolbar-title>

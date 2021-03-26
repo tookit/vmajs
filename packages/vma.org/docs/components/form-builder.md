@@ -1,23 +1,22 @@
 ---
-title: Cascader Select
-desc: A  common description here 
+title: Form Bulder
+desc: Very useful component for building vuetify forms
 layout: Article
 lang: en-US
-date: "2020-09-12"
+date: "2021-03-22"
 category: components
 ---
 
 
-## Cascader Select
+## Form Builder
 
-Cascade selection box. 
+Very useful component for building vuetify forms
 
 ## Playground
 
-<v-example file="ex-cascader" lang="js"> </v-example>
 
 
-## userage
+## Usage
 
 ``` js
 

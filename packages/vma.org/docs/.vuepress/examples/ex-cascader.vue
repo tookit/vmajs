@@ -1,14 +1,36 @@
 <template>
-  <v-cascader
-    v-model="selectedItem"
-    label="Select Product"
-    item-value="id"
-    item-text="text"
-    :items="items"
-    :outlined="option.outlined"
-    :dense="option.dense"
-    :clearable="option.clearable"
-  />
+  <div class="page-cascader mt-10">
+    <v-container>
+      <v-row>
+        <v-col :cols="12">
+          <v-card>
+            <v-toolbar flat>
+              <v-toolbar-title>Option</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-toolbar-items class="align-center">
+                <v-checkbox v-model="option.outlined" label="Outline" hide-details />
+                <v-checkbox v-model="option.dense" label="Dense" hide-details />
+                <v-checkbox v-model="option.clearable" label="Clearable" hide-details />
+              </v-toolbar-items>
+            </v-toolbar>
+            <v-divider></v-divider>
+            <v-card-text style="height: 350px">
+              <v-cascader
+                v-model="selectedItem"
+                label="Select Product"
+                item-value="id"
+                item-text="text"
+                :items="items"
+                :outlined="option.outlined"
+                :dense="option.dense"
+                :clearable="option.clearable"
+              />
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -81,7 +103,5 @@ export default {
       selectedItem: 99,
     }
   },
-  computed: {},
-  methods: {},
 }
 </script>

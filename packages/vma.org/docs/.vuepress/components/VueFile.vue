@@ -39,7 +39,6 @@ export default {
           /* webpackMode: "lazy-once" */
           `../examples/${this.file}.vue`
         )
-        console.log(component)
 
         this.$emit('loaded', component.default)
       } catch (err) {
