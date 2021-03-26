@@ -28,7 +28,7 @@ module.exports = {
       lang: 'zh',
       name: '简体中文',
       title: 'Vue Material Admin 文档',
-      description: 'Vue Material admin dashboard built with vuetify 2.x',
+      description: 'Material Design 后台模板',
       flag: '/img/zh.png'
     }
   },
