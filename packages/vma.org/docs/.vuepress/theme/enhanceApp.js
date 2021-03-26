@@ -49,23 +49,25 @@ import Vuetify, {
   VItem,
   VWindow,
   VWindowItem,
-  VItemGroup
+  VItemGroup,
+  //form
+  VTextField,
+  VTextarea,
+  VSwitch,
+  VSelect,
+  VAutocomplete
 } from 'vuetify/lib'
-import colors from 'vuetify/lib/util/colors'
 import './style/theme.sass'
 import { Ripple, Scroll } from 'vuetify/lib/directives'
 import zh from '@theme/locale/zh-Hans'
 import en from '@theme/locale/en'
-import postsMixin from '@theme/mixins/posts'
-import { VCascader } from "@tookit/vma";
-
+import { VCascader, VFormBuilder } from '@tookit/vma'
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
   router, // the router instance for the app
   siteData, // site metadata
 }) => {
-  // console.log(siteData, options)
   Vue.use(Vuetify, {
     components: {
       VApp,
@@ -119,7 +121,15 @@ export default ({
       VWindow,
       VWindowItem,
       VItemGroup,
-      VCascader
+      //form
+      VTextField,
+      VTextarea,
+      VSwitch,
+      VSelect,
+      VAutocomplete,
+      //vma
+      VCascader,
+      VFormBuilder
     },
     directives: {
       Ripple,
@@ -131,20 +141,5 @@ export default ({
       locales: { zh, en },
       current: 'en',
     },
-    theme: {
-      themes: {
-        light: {
-          primary: colors.grey.darken4,
-          secondary: colors.grey.darken1,
-          accent: colors.shades.black,
-          error: colors.red.accent3,
-        },
-        dark: {
-          primary: colors.blue.lighten3,
-        },
-      },
-    },
   })
-
-  Vue.mixin(postsMixin)
 }

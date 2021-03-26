@@ -5,13 +5,13 @@
   "author": {
     "name": "Tookit (Michael Wang)"
   },
-  "homepage": "https://github.com/tookit/vuepress-theme-neptune#readme",
+  "homepage": "readme",
   "bugs": {
-    "url": "https://github.com/tookit/vuepress-theme-neptune/issues"
+    "url": "issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tookit/vuepress-theme-neptune.git"
+    "url": "git"
   },
   "main": "index.js",
   "dependencies": {

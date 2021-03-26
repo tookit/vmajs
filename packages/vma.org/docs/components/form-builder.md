@@ -12,25 +12,30 @@ category: components
 
 Very useful component for building vuetify forms
 
-## Playground
-
-
-
 ## Usage
 
 ``` js
+<template>
+    <v-form-builder :items="formItems" v-model="formModel"/>
+</template>
 
 ```
+
+## Playground
+
+<v-example file="ex-form-builder" lang="js"> </v-example>
+
+
 
 
 ## API
 
-|   Name    |  Type   | Default | Required? | Description                                        |
-| :-------: | :-----: | :-----: | :-------: | -------------------------------------------------- |
-|   items   |  Array  |   []    |     Y     | A nested data set                                  |
-| itemValue | String  |  value  |     N     | Set property of items’s value - must be primitive. |
-| itemText  | String  |  value  |     N     | Set property of items’s text value                 |
-| outlined  | Boolean |  false  |     N     | Applies the outlined style to the input            |
-|   label   | String  |  null   |     N     | Set input's label                                  |
+|    Name    |       Type       |    Default     | Required? | Description                              |
+| :--------: | :--------------: | :------------: | :-------: | ---------------------------------------- |
+|   items    |      Array       |       []       |     Y     | Form elements props                      |
+|  element   |     [String]     |       []       |     Y     | The name of the form elements, component |
+|    cols    | [String, Number] |       12       |     N     | Form element's width                     |
+|   title    | [String, Number] | 'Form Builder' |     N     | Form title                               |
+| showHeader |     Boolean      |     false      |     N     | Show Form header                         |
 
 

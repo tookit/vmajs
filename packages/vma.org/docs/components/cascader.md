@@ -12,16 +12,20 @@ category: components
 
 Cascade selection box. 
 
+
+## Usage
+
+``` js
+
+<v-cascader :items="items" >
+
+```
+
+
 ## Playground
 
 <v-example file="ex-cascader" lang="js"> </v-example>
 
-
-## userage
-
-``` js
-
-```
 
 
 ## API

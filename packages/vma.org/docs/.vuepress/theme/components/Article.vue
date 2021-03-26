@@ -7,71 +7,38 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container>
-      <!-- Related article -->
-      <v-row class="grey lighten-4">
-        <v-col :cols="12">
-          <h3 class="mb-2">Up next</h3>
-          <v-divider />
-        </v-col>
-        <v-col v-for="item in related" :key="item.key" :lg="6" :cols="12">
-          <template v-if="item.frontmatter.image">
-            <v-card tile :to="item.path">
-              <v-img :src="item.frontmatter.image" />
-              <v-card-title class="subtitle-1">{{ item.title }}</v-card-title>
-            </v-card>
-          </template>
-          <template v-else>
-            <v-card>
-              <v-list two-line class="pa-0">
-                <v-list-item :to="item.path">
-                  <v-list-item-avatar color="grey darken-4" tile>
-                    <span class="white--text">
-                      {{ item.title.charAt(0) }}
-                    </span>
-                  </v-list-item-avatar>
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      {{ item.title }}
-                    </v-list-item-title>
-                    <v-list-item-subtitle>
-                      {{ item.frontmatter.date }}
-                    </v-list-item-subtitle>
-                  </v-list-item-content>
-                  <v-list-item-icon>
-                    <v-icon>mdi-arrow-right</v-icon>
-                  </v-list-item-icon>
-                </v-list-item>
-              </v-list>
-            </v-card>
-          </template>
-        </v-col>
-      </v-row>
-    </v-container>
+    <v-divider />
+    <div v-for="item in related" :key="item.key" :lg="6" :cols="12">
+      <v-card>
+        <v-list two-line class="pa-0">
+          <v-list-item :to="item.path">
+            <v-list-item-avatar color="primary" tile>
+              <span class="white--text">
+                {{ item.title.charAt(0) }}
+              </span>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.title }}
+              </v-list-item-title>
+              <v-list-item-subtitle>
+                {{ item.frontmatter.date }}
+              </v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-icon>
+              <v-icon>mdi-arrow-right</v-icon>
+            </v-list-item-icon>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </div>
     <template v-if="!showToc">
-      <v-btn
-        small
-        fab
-        dark
-        fixed
-        tile
-        right="right"
-        class="btn_toc"
-        color="primary"
-        @click="showToc = true"
-      >
+      <v-btn small fab dark fixed tile right="right" class="btn_toc" color="primary" @click="showToc = true">
         <v-icon>mdi-view-list</v-icon>
       </v-btn>
     </template>
     <template v-else>
-      <v-navigation-drawer
-        v-model="showToc"
-        style="padding-top: 64px"
-        right
-        fixed
-        clipped
-        width="200px"
-      >
+      <v-navigation-drawer v-model="showToc" style="padding-top: 64px" right fixed clipped width="200px">
         <Toc />
       </v-navigation-drawer>
     </template>

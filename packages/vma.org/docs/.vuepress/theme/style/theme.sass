@@ -5,7 +5,7 @@ $body-font-family: 'Roboto', sans-serif
 $font-size-root: 14px
 $line-height-root: 1.5
 //
-$primary-color: '#424242'
+// $primary-color: '#424242'
 
 @import './code'
 
@@ -13,6 +13,8 @@ $primary-color: '#424242'
   padding-right: 200px !important
 
 .article
+  max-width: 960px
+  margin: 0 auto
   min-height: 90vh
   padding: 35px 25px
   .btn_toc
@@ -94,9 +96,7 @@ $primary-color: '#424242'
 
 .custom-block.tip
   background-color: #f3f5f7
-  border-color: $primary-color
   & .custom-block-title
-    color: $primary-color
 
 .custom-block.warning
   background-color: rgba(0,0,0,.7)

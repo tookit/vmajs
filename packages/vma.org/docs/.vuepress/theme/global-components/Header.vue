@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar dark app clipped-left>
+  <v-app-bar color="primary" dark app clipped-left>
     <v-app-bar-nav-icon v-if="!isHome" @click="$emit('toogle:sidebar')" />
     <v-toolbar-title class="ml-0 pl-3">
       <span>{{ siteTitle }}</span>
