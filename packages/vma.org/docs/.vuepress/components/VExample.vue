@@ -2,48 +2,37 @@
   <v-sheet class="mb-9 v-example" outlined>
     <v-lazy min-height="52" @mouseenter="importTemplate">
       <div class="text-end pa-2">
-        <v-btn icon @click="expand= !expand">
+        <v-btn icon @click="expand = !expand">
           <v-icon>mdi-code-tags</v-icon>
         </v-btn>
-        <v-btn icon @click="expand=!expand">
+        <v-btn icon @click="expand = !expand">
           <v-icon>mdi-eye</v-icon>
-        </v-btn>        
+        </v-btn>
       </div>
     </v-lazy>
     <v-divider />
     <div v-if="pen">
       <v-expand-transition>
         <div v-show="expand">
-          <v-item-group v-model="selected" class="pa-2" mandatory>
-            <template v-for="(section, i) in sections">
-              <v-item :key="`item-${i}`" :value="section">
-                <template #default="{ active, toggle }">
-                  <v-btn :input-value="active" class="mr-2" text @click="toggle">
-                    {{ section }}
-                  </v-btn>
-                </template>
-              </v-item>
+          <v-tabs class="route-tab border-bottom" v-model="defaultTab">
+            <v-tab v-for="section in sections" :key="section" :href="'#' + section">
+              {{ section }}
+            </v-tab>
+          </v-tabs>
+          <v-tabs-items v-model="defaultTab">
+            <template v-for="section in sections">
+              <v-tab-item :key="section" :value="section">
+                <v-markup :code="pen[section]" />
+              </v-tab-item>
             </template>
-          </v-item-group>
-          <v-divider />
-          <v-window v-model="selected" class="grey lighten-5">
-            <template v-for="(section, i) in sections">
-              <v-window-item :key="`window-${i}`" :value="section"> 
-                <v-markup
-                  :code="pen[section]"
-                />                
-              </v-window-item>
-            </template>
-          </v-window>
-
+          </v-tabs-items>
           <v-divider />
         </div>
       </v-expand-transition>
-
     </div>
     <!--  -->
     <v-sheet class="pa-8">
-      <div style="max-width: 600px; margin:0 auto;">
+      <div style="max-width: 600px; margin: 0 auto">
         <vue-file :file="file" @error="hasError = true" />
       </div>
     </v-sheet>
@@ -59,11 +48,12 @@ export default {
   name: 'VExample',
   components: {
     VueFile,
-    VMarkup
+    VMarkup,
   },
   mixins: [Codepen],
   props: { file: String },
   data: () => ({
+    defaultTab: 'template',
     dark: false,
     expand: false,
     hasError: false,

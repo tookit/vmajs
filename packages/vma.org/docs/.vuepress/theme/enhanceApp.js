@@ -12,7 +12,12 @@ import Vuetify, {
   VRow,
   VCol,
   VFooter,
-  //
+  //tab
+  VTabs,
+  VTab,
+  VTabItem,
+  VTabsItems,
+  //card
   VCard,
   VCardTitle,
   VCardText,
@@ -85,6 +90,12 @@ export default ({
       VCol,
       VFooter,
       //
+      //tab
+      VTabs,
+      VTab,
+      VTabItem,
+      VTabsItems,
+      //card     
       VCard,
       VCardTitle,
       VCardText,
