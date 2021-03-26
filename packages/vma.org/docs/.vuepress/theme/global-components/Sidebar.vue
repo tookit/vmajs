@@ -1,26 +1,20 @@
 <template>
   <v-navigation-drawer class="app--drawer" app clipped>
     <v-list>
-      <template v-for="items, group in groupPages">
-       <v-subheader :key="group">{{  group.toUpperCase()   }}</v-subheader>
-        <v-list-item-group :key="'i' + group" v-model="$page.path">
-          <v-list-item v-for="item in items" :key="item.key" :value="item.path" :href="item.path">
-            <v-list-item-icon v-if="item.frontmatter.icon">
-              <v-icon color="primary">{{ item.frontmatter.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>      
-      </template>
+      <v-subheader>Intro</v-subheader>
+      <sidebar-list :pages="groups.intro" />
+      <v-subheader>Components</v-subheader>
+      <sidebar-list :pages="groups.components" />
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
-
+import SidebarList from '../components/SidebarList'
 export default {
+  components: {
+    SidebarList
+  },
   props: {},
   data() {
     return {
@@ -28,7 +22,7 @@ export default {
     }
   },
   computed: {
-    groupPages() {
+    groups() {
       const groupBy = require('lodash.groupby')
       const lang = this.$lang
       const pages =  this.$site.pages.filter(

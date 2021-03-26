@@ -28,7 +28,6 @@ export default {
   methods: {
     async load() {
       let component = {}
-      console.log(this.file)
       try {
         component = await import(
           /* webpackChunkName: "examples" */

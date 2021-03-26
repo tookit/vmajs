@@ -1,5 +1,5 @@
 ---
-title: Form Bulder
+title: Form Builder
 desc: Very useful component for building vuetify forms
 layout: Article
 lang: en-US
