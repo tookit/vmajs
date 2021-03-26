@@ -8,25 +8,25 @@ category: intro
 ---
 
 
-## Intro
+## 简介
 
 
-Vue material admin is created by vue 2.x and vuetifyjs, for making my life easier with UI 
-I just wrapped some common element, so you can easily create a nice material design dashboard.
+[Vue material admin] 是基于 `vue` 和　`vuetify`构建的一个后台模板
+为了使我们方便搭建`material design`的后台，　封装了一些常用的组件
 
 
-## Quick start
+## 开始
 
-Play with it.
+开始上手
 
-## Clone the code
+## 拷贝代码
   
 ``` bash
 git clone [VMA](https://github.com/tookit/vue-material-admin)
 
 ```
 
-## Stucture
+## 工程结构
 
 ```
 
@@ -56,7 +56,7 @@ git clone [VMA](https://github.com/tookit/vue-material-admin)
 ```
 
 
-###  Install dependcy
+###  安装依赖
 
 you can use `yarn` or `npm`
 
@@ -66,7 +66,7 @@ yarn install
 
 ```
 
-###  Run the code
+###  运行代码
 
 
 ``` bash
