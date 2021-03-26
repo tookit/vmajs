@@ -10,7 +10,7 @@
         class="toc_list__item"
         :to="computeHash(item.slug)"
       >
-        <span class="toc_list__item__title">
+        <span class="body-2">
           {{ item.title }}
         </span>
       </v-list-item>
@@ -22,7 +22,6 @@ export default {
   data() {
     return {}
   },
-
   methods: {
     findActiveIndex() {},
     computeHash(slug) {
