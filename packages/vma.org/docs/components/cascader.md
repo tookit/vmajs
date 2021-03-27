@@ -6,6 +6,11 @@ lang: en-US
 icon: mdi-form-select
 date: "2020-09-12"
 category: components
+meta:
+  - name: description
+    content: hello
+  - name: keywords
+    content: super duper SEO
 ---
 
 

@@ -1,6 +1,9 @@
 module.exports = {
   title: 'Vue Material Admin Document',
   description: 'Vue Material Admin Document',
+  meta: {
+    keywords: 'Vue material design, material cascader'
+  },
   themeConfig: {
     nav: {
       '/': [
@@ -39,7 +42,7 @@ module.exports = {
     [
       '@vuepress/google-analytics',
       {
-        ga: 'G-F0H07N62GC'
+        ga: 'UA-3881136-12'
       }
     ],
     [
