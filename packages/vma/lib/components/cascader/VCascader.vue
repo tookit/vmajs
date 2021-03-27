@@ -114,18 +114,19 @@ export default {
       })
     },
 
-    findPath(id) {
-      return id
-        ? this.items
-            .map((item) => {
-              return findPath(item, id, {
-                value: this.itemValue,
-                children: this.childrenKey,
-              })
-            })
-            .filter((item) => item.length > 0)
-            .pop()
-        : []
+    findPath(val) {
+      if (val) {
+        const find = this.items.find((item) => {
+          const temp = findPath(item, val, {
+            value: this.itemValue,
+            children: this.childrenKey,
+          })
+          return temp.length > 0
+        })
+        return find || []
+      } else {
+        return []
+      }
     },
     computeValue() {
       const value = this.multiple

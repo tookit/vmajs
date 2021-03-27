@@ -8,15 +8,16 @@ date: "2020-09-12"
 category: components
 meta:
   - name: description
-    content: hello
+    content: A material cascader select component
   - name: keywords
-    content: super duper SEO
+    content: material cascader, multiple select, vuetify select
 ---
 
 
 ## Cascader Select
 
 Cascade selection box. 
+A common use will be select a sub caegory in a nested categories
 
 
 ## Usage
@@ -36,12 +37,14 @@ Cascade selection box.
 
 ## API
 
-|   Name    |  Type   | Default | Required? | Description                                        |
-| :-------: | :-----: | :-----: | :-------: | -------------------------------------------------- |
-|   items   |  Array  |   []    |     Y     | A nested data set                                  |
-| itemValue | String  |  value  |     N     | Set property of items’s value - must be primitive. |
-| itemText  | String  |  value  |     N     | Set property of items’s text value                 |
-| outlined  | Boolean |  false  |     N     | Applies the outlined style to the input            |
-|   label   | String  |  null   |     N     | Set input's label                                  |
-
+|    Name     |  Type   | Default  | Required? | Description                                        |
+| :---------: | :-----: | :------: | :-------: | -------------------------------------------------- |
+|    items    |  Array  |    []    |     Y     | A nested data set                                  |
+|  itemValue  | String  |  value   |     N     | Set property of items’s value - must be primitive. |
+|  itemText   | String  |  value   |     N     | Set property of items’s text value                 |
+|  outlined   | Boolean |  false   |     N     | Applies the outlined style to the input            |
+|  clearable  | Boolean |  false   |     N     | Clear the selection state                          |
+|    label    | String  |   null   |     N     | Set input's label                                  |
+| placeholder | String  |   null   |     N     | Set input's placeholder                            |
+| childrenKey | String  | children |     N     | Specify the children key in `items`                |
 

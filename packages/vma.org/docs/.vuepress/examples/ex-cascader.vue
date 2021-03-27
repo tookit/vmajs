@@ -18,7 +18,7 @@
               <v-cascader
                 v-model="selectedItem"
                 label="Select Product"
-                item-value="id"
+                item-value="value"
                 item-text="text"
                 :items="items"
                 :outlined="option.outlined"
@@ -100,7 +100,7 @@ export default {
           ],
         },
       ],
-      selectedItem: 99,
+      selectedItem: 'phone xx',
     }
   },
 }
