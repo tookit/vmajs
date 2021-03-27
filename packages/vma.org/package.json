@@ -2,13 +2,13 @@
   "name": "vma.org",
   "description": "Vue material admin document site",
   "author": "tookit",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "license": "MIT",
   "private": true,
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy":"aliyun-oss-deploy -p ./docs/.vuepress/dist",
+    "docs:deploy": "aliyun-oss-deploy -p ./docs/.vuepress/dist",
     "release": "release-it"
   },
   "devDependencies": {
@@ -18,7 +18,7 @@
     "vuepress": "^1.8.2"
   },
   "dependencies": {
-    "@tookit/vma": "^0.6.5",
+    "@tookit/vma": "^0.6.6",
     "lodash.groupby": "^4.6.0",
     "markdown-it-prism": "^2.1.6",
     "prism": "^4.1.2",
