@@ -106,24 +106,21 @@ export default {
   methods: {
     initValue(val) {
       this.selectedItems = this.findPath(val)
-      this.selectedItems.forEach((item, depth) => {
-        const children = item[this.childrenKey]
-        if (children) {
-          this.childrens[depth + 1] = children
-        }
-      })
     },
 
     findPath(val) {
       if (val) {
-        const find = this.items.find((item) => {
+        let path = []
+        this.items.forEach((item) => {
           const temp = findPath(item, val, {
             value: this.itemValue,
             children: this.childrenKey,
           })
-          return temp.length > 0
+          if (temp.length > 0) {
+            path = temp
+          }
         })
-        return find || []
+        return path
       } else {
         return []
       }
