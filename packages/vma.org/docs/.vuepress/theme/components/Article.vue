@@ -8,30 +8,33 @@
       </v-row>
     </v-container>
     <v-divider />
-    <div v-for="item in related" :key="item.key" :lg="6" :cols="12">
-      <v-card>
-        <v-list two-line class="pa-0">
-          <v-list-item :to="item.path">
-            <v-list-item-avatar color="primary" tile>
-              <span class="white--text">
-                {{ item.title.charAt(0) }}
-              </span>
-            </v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ item.title }}
-              </v-list-item-title>
-              <v-list-item-subtitle>
-                {{ item.frontmatter.date }}
-              </v-list-item-subtitle>
-            </v-list-item-content>
-            <v-list-item-icon>
-              <v-icon>mdi-arrow-right</v-icon>
-            </v-list-item-icon>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </div>
+    <v-row no-gutters>
+      <v-col v-for="item in related" :key="item.key" :lg="6" :cols="6">
+        <v-card>
+          <v-list two-line class="pa-0">
+            <v-list-item :to="item.path">
+              <v-list-item-avatar color="primary" tile>
+                <span class="white--text">
+                  {{ item.title.charAt(0) }}
+                </span>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>
+                  {{ item.title }}
+                </v-list-item-title>
+                <v-list-item-subtitle>
+                  {{ item.frontmatter.date }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
+              <v-list-item-icon>
+                <v-icon>mdi-arrow-right</v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
+
     <template v-if="!showToc">
       <v-btn small fab dark fixed tile right="right" class="btn_toc" color="primary" @click="showToc = true">
         <v-icon>mdi-view-list</v-icon>
