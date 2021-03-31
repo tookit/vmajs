@@ -11,7 +11,9 @@
             </v-btn>
             <v-btn  large :href="startUrl" tile>
               Getting Started
-            </v-btn>            
+            </v-btn>   
+            <br>
+            <iframe class="mt-3" src="https://ghbtns.com/github-btn.html?user=tookit&repo=vue-material-admin&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
           </v-col>
           <v-col :cols="6">
             <v-carousel

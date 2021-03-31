@@ -34,7 +34,6 @@
         </v-card>
       </v-col>
     </v-row>
-
     <template v-if="!showToc">
       <v-btn small fab dark fixed tile right="right" class="btn_toc" color="primary" @click="showToc = true">
         <v-icon>mdi-view-list</v-icon>
