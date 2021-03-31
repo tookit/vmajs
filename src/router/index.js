@@ -10,7 +10,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'hash',
   linkActiveClass: 'active',
-  routes: routes
+  routes: routes,
 })
 // router gards
 router.beforeEach((to, from, next) => {
@@ -18,14 +18,7 @@ router.beforeEach((to, from, next) => {
   const token = store.getters.getAccessToken
   if (to.name !== 'login') {
     if (token) {
-      store
-        .dispatch('fetchProfile')
-        .then(() => {
-          next()
-        })
-        .catch(() => {
-          next({ name: 'login', query: { redirect: to.path } })
-        })
+      next()
     } else {
       next({ name: 'login', query: { redirect: to.path } })
     }

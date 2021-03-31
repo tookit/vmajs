@@ -1,7 +1,7 @@
 <template>
   <div class="messaging_item" :class="rowReverse">
     <div class="messaging_item__avatar">
-      <c-avatar :size="36" :username="username" status="online" />
+      <c-avatar :size="36" :username="username" :src="computeAvatar(username)" status="online" />
     </div>
     <div class="messaging_item__body">
       <div class="pa-2">
@@ -19,39 +19,39 @@ import CAvatar from '@/components/avatar/CAvatar'
 import { format } from 'date-fns'
 import { mapGetters } from 'vuex'
 export default {
-  props: {
-    username: [Number, String],
-    status: [Number, String],
-    text: [String],
-    createdAt: [String, Number]
-  },
   components: {
-    CAvatar
-  },
-  data() {
-    return {}
+    CAvatar,
   },
   filters: {
     formateDate(val) {
       return format(val, 'yyyy-MM-dd H:mm:s')
-    }
+    },
+  },
+  props: {
+    username: [Number, String],
+    status: [Number, String],
+    text: [String],
+    createdAt: [String, Number],
+  },
+  data() {
+    return {}
   },
   computed: {
-    ...mapGetters([
-      'getAvatar',
-      'getUsername',
-      'getClientId',
-      'getStatusByName'
-    ]),
+    ...mapGetters(['getAvatar', 'getUsername', 'getClientId', 'getStatusByName']),
     isMyOwn() {
-      return this.username === this.getClientId
+      return this.username === this.getUsername
     },
     rowReverse() {
       return {
-        'flex-row-reverse': !this.isMyOwn
+        'flex-row-reverse': !this.isMyOwn,
       }
-    }
-  }
+    },
+  },
+  methods: {
+    computeAvatar(username) {
+      return this.getUsername === username ? this.getAvatar : ''
+    },
+  },
 }
 </script>
 

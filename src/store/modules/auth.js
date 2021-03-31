@@ -12,28 +12,41 @@ const state = {
   access_token: null,
   expires_in: 3600,
   token_type: 'bearer',
-  username: null,
+  username: 'admin',
   avatar: null,
   userColor: '#2196f3',
-  status: 'online'
+  status: 'online',
 }
 const getters = {
   getAccessToken: (state) => {
     return state.access_token
   },
   getAvatar: (state) => state.avatar,
+
   getUsername: (state) => state.username,
-  getUserStatus: (state) => state.status
+  getUserStatus: (state) => state.status,
 }
 const actions = {
+  // just for demo
+  //replace you own login logic
+  demoLogin({ commit }, { username, password }) {
+    return new Promise((resolve, reject) => {
+      if (username === 'admin' && password === 'admin') {
+        commit('SET_LOGIN', { access_token: 'demo', expires_in: 0 })
+        return resolve({ message: 'success' })
+      } else {
+        return reject({ message: 'Auth Failed' })
+      }
+    })
+  },
   login({ commit, dispatch }, { username, password }) {
     return request({
       url: '/auth/login',
       method: 'post',
       data: {
         username,
-        password
-      }
+        password,
+      },
     }).then((resp) => {
       commit('SET_LOGIN', resp)
       dispatch('fetchProfile')
@@ -43,16 +56,15 @@ const actions = {
     return request({
       url: '/auth/register',
       method: 'post',
-      data: data
+      data: data,
     }).then((resp) => {
       commit('SET_LOGIN', resp)
-      dispatch('closeConnection')
       dispatch('fetchProfile')
       return resp
     })
   },
   logout({ commit, dispatch }) {
-    dispatch('closeConnection')
+    dispatch('closeSocket')
     commit('SET_ACCESS_TOKEN', null)
   },
   // get current login user info
@@ -60,15 +72,12 @@ const actions = {
   fetchProfile({ commit, dispatch, rootState }) {
     return request({
       url: '/me',
-      method: 'get'
+      method: 'get',
     }).then((resp) => {
       commit('SET_LOGIN_PROFILE', resp.data)
-      if (!rootState.socket) {
-        dispatch('initSocket')
-      }
       return resp
     })
-  }
+  },
 }
 const mutations = {
   SET_LOGIN(state, { access_token, expires_in }) {
@@ -85,7 +94,7 @@ const mutations = {
   },
   UPDATE_SELF_STATUS(state, status) {
     state.status = status
-  }
+  },
 }
 
 export default {
@@ -93,5 +102,5 @@ export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 }

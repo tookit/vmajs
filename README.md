@@ -9,11 +9,8 @@ English | [简体中文](./README.zh-CN.md)
 About vuetify deveopment, please check my blog [http://isocked.com], (A vuepress theme made with vuetify)
 
 ## Plan and features
-* add i18n support
-* refactor media page
-* reffactor mail page
 * build a rest api for integration [vma-api](https://github.com/tookit/vma-api)
-* build a websocket server for integrating chat app
+* build a websocket server for integrating chat app[chat-server](https://github.com/tookit/vma-chat-serverhttps://github.com/tookit/vma-chat-server)
 
 ## Introduction
 Vue Material Admin Template is a [Vue](https://vuejs.org/index.html/) Based Material Design Admin Template.
@@ -25,18 +22,22 @@ Vuetify is Awesome.
 
 ## Demo
 [http://vma.isocked.com/#/dashboard]
+
+
 ## Preview
-![Preivew](http://vma.isocked.com//static/preview/01_preview.png)
+![Preivew](http://doc.isocked.com/img/preview.png)
+
+## Documentation
+
+[doc](http://doc.isocked.com/)
 
 ## Project Structure
 ``` bash
-├── build
-├── config (Webpack)
 ├── src
 │   ├── api
 │   ├── components
 │   ├── mixins
-│   ├── views (or views)
+│   ├── views
 │   ├── router
 │   ├── store
 │   ├── util
@@ -48,11 +49,11 @@ Vuetify is Awesome.
 ├── dist
 ├── release
 ├── static (or asset)
-├── mock (or script to build mock data)
 ├── node_modules
 ├── test
 ├── README.md
 ├── package.json
+├── vue.config.js
 ├── index.html
 └── .gitignore
 ```
