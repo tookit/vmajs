@@ -11,11 +11,25 @@ category: components
 
 ## Form Builder
 
-Very useful component for building vuetify forms
+Very useful component for building vuetify forms.
+
+This component can make your vuetify form by configurtion, it will save u lot of time.
+
+## Install
+
+```js
+yarn add @tookit/vma
+
+```
+
 
 ## Usage
 
 ``` js
+
+import { VFormBuilder } from '@tookit/vma'
+
+
 <template>
     <v-form-builder :items="formItems" v-model="formModel"/>
 </template>

@@ -70,7 +70,7 @@ import './style/theme.sass'
 import { Ripple, Scroll } from 'vuetify/lib/directives'
 import zh from '@theme/locale/zh-Hans'
 import en from '@theme/locale/en'
-import { VCascader, VFormBuilder } from '@tookit/vma'
+import { VCascader, VFormBuilder, VGrid } from '@tookit/vma'
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
@@ -147,7 +147,8 @@ export default ({
       VAutocomplete,
       //vma
       VCascader,
-      VFormBuilder
+      VFormBuilder,
+      VGrid
     },
     directives: {
       Ripple,

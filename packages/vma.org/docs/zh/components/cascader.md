@@ -19,9 +19,19 @@ meta:
 通常用于选择多级分类
 
 
+## 安装
+
+```js
+yarn add @tookit/vma
+
+```
+
+
 ## 用法
 
 ``` js
+import { VCascader } from '@tookit/vma'
+
 
 <v-cascader :items="items" label="选择分类" >
 

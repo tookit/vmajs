@@ -20,9 +20,20 @@ Cascade selection box.
 A common use will be select a sub caegory in a nested categories
 
 
+
+## Install
+
+```js
+yarn add @tookit/vma
+
+```
+
+
 ## Usage
 
 ``` js
+
+import { VCascader } from '@tookit/vma'
 
 <v-cascader :items="items" >
 

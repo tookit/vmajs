@@ -35,7 +35,7 @@
     </div>
     <!--  -->
     <v-sheet class="pa-8">
-      <div style="max-width: 600px; margin: 0 auto">
+      <div>
         <vue-file :file="file" @error="hasError = true" />
       </div>
     </v-sheet>

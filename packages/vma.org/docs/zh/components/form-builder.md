@@ -1,5 +1,5 @@
 ---
-title: Form Builder
+title: 表单构建
 desc: Very useful component for building vuetify forms
 layout: Article
 lang: zh
@@ -9,20 +9,44 @@ category: components
 ---
 
 
-## Form Builder
+## 表单构建
 
-Very useful component for building vuetify forms
+封装了Veutifyjs通用的表单元素，通过配置化的方式生成表单，减少我们大量的重复工作.
 
-## Usage
+## 安装
+
+```js
+yarn add @tookit/vma
+
+```
+
+## 简单用法
 
 ``` js
+
+import { VFormBuilder } from '@tookit/vma'
+
 <template>
     <v-form-builder :items="formItems" v-model="formModel"/>
 </template>
 
+const formItems =  [
+    {
+        cols: 6,
+        element: 'v-text-field',
+        props: {
+        name: 'username',
+        required: true,
+        outlined: true,
+        rules: [(v) => !!v || 'Username is required'],
+        },
+    }    
+]
+....
+
 ```
 
-## Playground
+## 预览
 
 <v-example file="ex-form-builder" lang="js"> </v-example>
 

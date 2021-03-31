@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "n-ary-tree": "^0.4.0",
+    "sortablejs": "^1.13.0",
     "vuetify": "2.4.8"
   }
 }
