@@ -1,7 +1,6 @@
 import { VContainer, VRow, VCol, VForm, VCard, VCardActions, VToolbar, VToolbarTitle, VBtn } from 'vuetify/lib'
 
 export default {
-  name: 'v-form-builder',
   props: {
     showHeader: Boolean,
     tile: Boolean,
@@ -49,6 +48,13 @@ export default {
     genFormItem(item) {
       const { name } = item.props
       const VNode = this.$createElement(item.element, {
+        model: {
+          value: this.formData[name],
+          callback: (newValue) => {
+            console.log(newValue, VNode)
+            this.formData[name] = newValue
+          },
+        },
         props: {
           ...item.props,
           label: item.props.label ? item.props.label : name.toUpperCase(),
@@ -56,10 +62,7 @@ export default {
           value: this.formData[name],
         },
         on: {
-          input: (e) => {
-            this.formData[name] = e
-            this.$emit('input', this.formData)
-          },
+          ...item.on,
         },
       })
       return this.$createElement(
@@ -130,6 +133,7 @@ export default {
               },
               on: {
                 click: () => {
+                  this.$refs.form.reset()
                   this.$emit('form:cancel')
                 },
               },
