@@ -70,7 +70,14 @@ export default {
 
 ## API
 
-You can check all avaiable options in [v-datatable](https://vuetifyjs.com/en/components/data-tables/)
+|   Name   |  Type   | Default | Required? | Description                |
+| :------: | :-----: | :-----: | :-------: | -------------------------- |
+| sortable | Boolean |  false  |     N     | Control if enable sortable |
+
+
+
+Because the component is extends from `v-datatable`,
+you can check all avaiable options about `v-datable` in [v-datatable](https://vuetifyjs.com/en/components/data-tables/)
 
 ## Event
 
@@ -79,10 +86,10 @@ For detail events, pls check [sortablejs](https://github.com/SortableJS/Sortable
 :::
 
 
-| Name  | Description         |
-| :---: | ------------------- |
-| `sortable:onSort` | Emit by any change to the list (add / update / remove) |
-| `sortable:onChange` | Called when dragging element changes position |
-| `sortable:onMove` | Event when you move an item in the list or between lists |
+|        Name         | Description                                              |
+| :-----------------: | -------------------------------------------------------- |
+|  `sortable:onSort`  | Emit by any change to the list (add / update / remove)   |
+| `sortable:onChange` | Called when dragging element changes position            |
+|  `sortable:onMove`  | Event when you move an item in the list or between lists |
 
 
