@@ -10,40 +10,47 @@ import Sortable, { Swap } from 'sortablejs'
 Sortable.mount(new Swap())
 
 export default VDataTable.extend({
-  name: 'CGrid',
+  props: {
+    sortable: Boolean,
+  },
   created() {
-    this.$nextTick(() => {
-      new Sortable(document.querySelector(`.v-data-table__wrapper > table > tbody`), {
-        animation: 150,
-        draggable: 'tr',
-        onSort: (e) => {
-          this.$emit('sortable:onSort', e)
-        },
-        onChoose: (e) => {
-          this.$emit('sortable:onChoose', e)
-        },
-        onUnchoose: (e) => {
-          this.$emit('sortable:onUnchoose', e)
-        },
-        onStart: (e) => {
-          this.$emit('sortable:onStart', e)
-        },
-        onEnd: (e) => {
-          this.$emit('sortable:onEnd', e)
-        },
-        OnMove: (e) => {
-          this.$emit('sortable:OnMove', e)
-        },
-        onUpdate: (e) => {
-          this.$emit('sortable:onUpdate', e)
-        },
-        onChange: (e) => {
-          this.$emit('sortable:onChange', e)
-        },
-      })
-    })
+    if (this.sortable) {
+      this.initSortable()
+    }
   },
   methods: {
+    initSortable() {
+      this.$nextTick(() => {
+        new Sortable(document.querySelector(`.v-data-table__wrapper > table > tbody`), {
+          animation: 150,
+          draggable: 'tr',
+          onSort: (e) => {
+            this.$emit('sortable:onSort', e)
+          },
+          onChoose: (e) => {
+            this.$emit('sortable:onChoose', e)
+          },
+          onUnchoose: (e) => {
+            this.$emit('sortable:onUnchoose', e)
+          },
+          onStart: (e) => {
+            this.$emit('sortable:onStart', e)
+          },
+          onEnd: (e) => {
+            this.$emit('sortable:onEnd', e)
+          },
+          OnMove: (e) => {
+            this.$emit('sortable:OnMove', e)
+          },
+          onUpdate: (e) => {
+            this.$emit('sortable:onUpdate', e)
+          },
+          onChange: (e) => {
+            this.$emit('sortable:onChange', e)
+          },
+        })
+      })
+    },
     genDefaultSimpleRow(item, index, classes = {}) {
       const scopedSlots = getPrefixedScopedSlots('item.', this.$scopedSlots)
       const data = this.createItemProps(item, index)
