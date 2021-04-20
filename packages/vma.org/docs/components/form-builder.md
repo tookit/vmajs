@@ -54,3 +54,11 @@ import { VFormBuilder } from '@tookit/vma'
 | showHeader |     Boolean      |     false      |     N     | Show Form header                         |
 
 
+
+## Event
+
+| Name  | Description         |
+| :---: | ------------------- |
+| `form:submit` | Emit when form submit |
+| `form:cancel` | Emit when form cancel |
+

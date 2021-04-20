@@ -64,3 +64,10 @@ const formItems =  [
 | showHeader |     Boolean      |     false      |     N     | Show Form header                         |
 
 
+
+## 事件
+
+| 事件名  | 描述         |
+| :---: | ------------------- |
+| `form:submit` | Emit when form submit |
+| `form:cancel` | Emit when form cancel |
