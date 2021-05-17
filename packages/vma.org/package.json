@@ -25,6 +25,6 @@
     "prismjs": "^1.23.0",
     "raw-loader": "^4.0.2",
     "vue-github-button": "^1.3.0",
-    "vuetify": "2.4.10"
+    "vuetify": "2.5.0"
   }
 }

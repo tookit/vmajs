@@ -50,6 +50,6 @@
     "node": ">= 8"
   },
   "dependencies": {
-    "vuetify": "^2.4.10"
+    "vuetify": "^2.5.0"
   }
 }
