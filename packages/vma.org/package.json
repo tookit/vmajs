@@ -2,7 +2,7 @@
   "name": "vma.org",
   "description": "Vue material admin document site",
   "author": "tookit",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -18,7 +18,7 @@
     "vuepress": "^1.8.2"
   },
   "dependencies": {
-    "@tookit/vma": "^0.6.8",
+    "@tookit/vma": "^0.6.9",
     "lodash.groupby": "^4.6.0",
     "markdown-it-prism": "^2.1.6",
     "prism": "^4.1.2",
